@@ -95,7 +95,7 @@ namespace AppBTS.Negocio
             BDHelper oDatos = new BDHelper();
             return oDatos.consultar(consulta);
         }
-        //hola2
+        //hola2dda
     }
 }
  
