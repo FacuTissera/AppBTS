@@ -10,6 +10,8 @@ namespace AppBTS.Negocio
 {
     class Bug
     {
+
+         //hola
         private int id_bug;
         private string titulo;
         private string descripcion;
