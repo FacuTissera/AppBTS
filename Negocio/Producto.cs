@@ -18,8 +18,8 @@ namespace AppBTS.Negocio
         {
             string consulta = "select * from Productos where borrado = 0 order by 2";
 
-            BDHelper oDatos = new BDHelper();
-            return oDatos.consultar(consulta);
+            //BDHelper oDatos = new BDHelper();
+            return BDHelper.obtenerInstancia().consultar(consulta);
         }
     }
 }

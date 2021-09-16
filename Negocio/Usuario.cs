@@ -27,10 +27,10 @@ namespace AppBTS.Negocio
        public int validarUsuario(string nombre, string clave)
        {
             string consulta = "select * from Usuarios where usuario='" + nombre + "' and password= '" + clave + "'";
-            DataTable table = new DataTable();
-            
-            BDHelper oDatos = new BDHelper();
-            DataTable tabla = oDatos.consultar(consulta);
+            DataTable tabla = new DataTable();
+
+            //BDHelper oDatos = new BDHelper();
+            BDHelper.obtenerInstancia().consultar(consulta)
 
             if (tabla.Rows.Count > 0)
             {
@@ -46,8 +46,8 @@ namespace AppBTS.Negocio
         {
             string consulta = "select * from Usuarios where borrado = 0 ORDER BY 2";
 
-            BDHelper oDatos = new BDHelper();
-            return oDatos.consultar(consulta);
+            //BDHelper oDatos = new BDHelper();
+            return BDHelper.obtenerInstancia().consultar(consulta);
         }
 
     }

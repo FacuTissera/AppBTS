@@ -31,10 +31,10 @@ namespace AppBTS.Negocio
                                + " JOIN Estados e on e.id_estado = h.id_estado)"
                                + " LEFT JOIN Usuarios us on h.id_usuario_asignado = us.id_usuario)"
                                + " WHERE h.id_bug ="+ idBug;
-                              
 
-            BDHelper oDatos = new BDHelper();
-            return oDatos.consultar(consulta);
+
+            //BDHelper oDatos = new BDHelper();
+            return BDHelper.obtenerInstancia().consultar(consulta);
         }
 
 

@@ -10,9 +10,26 @@ namespace AppBTS.Datos
 {
     class BDHelper
     {
-        private SqlConnection conexion = new SqlConnection();
-        private SqlCommand comando = new SqlCommand();
-        private string cadenaConexion = @"Data Source=DESKTOP-GBIGEVC\SQLEXPRESS;Initial Catalog=PAVI;Integrated Security=True";
+        //singleton
+        private static BDHelper instancia;
+        private SqlConnection conexion;
+        private SqlCommand comando;
+        private string cadenaConexion;
+
+        private BDHelper()
+        {
+            conexion = new SqlConnection();
+            comando = new SqlCommand();
+            cadenaConexion = @"Data Source=DESKTOP-GBIGEVC\SQLEXPRESS;Initial Catalog=PAVI;Integrated Security=True";
+        }
+
+        public static BDHelper obtenerInstancia()
+        {
+            if (instancia == null)
+                instancia = new BDHelper();
+            return instancia;
+        }
+
         public DataTable consultar(string consultaSQL)
         {
             DataTable tabla = new DataTable();

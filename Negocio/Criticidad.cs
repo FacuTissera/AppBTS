@@ -18,8 +18,8 @@ namespace AppBTS.Negocio
         {
             string consulta = "select * from Criticidades where borrado = 0 ORDER BY 2";
 
-            BDHelper oDatos = new BDHelper();
-            return oDatos.consultar(consulta);
+            //BDHelper oDatos = new BDHelper();
+            return BDHelper.obtenerInstancia().consultar(consulta);
         }
     }
 }

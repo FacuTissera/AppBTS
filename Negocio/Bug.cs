@@ -47,8 +47,8 @@ namespace AppBTS.Negocio
                                + " JOIN Prioridades pr on pr.id_prioridad = b.id_prioridad "
                                + " WHERE b.borrado = 0";      
 
-            BDHelper oDatos = new BDHelper();
-            return oDatos.consultar(consulta);
+            //BDHelper oDatos = new BDHelper();
+            return BDHelper.obtenerInstancia().consultar(consulta);
         }
 
         public DataTable RecuperarFiltrados(string desde, string hasta, string estado, string  prioridad, string producto, string asignado, string criticidad)
@@ -76,8 +76,8 @@ namespace AppBTS.Negocio
 
             consulta += " ORDER BY b.fecha_alta DESC";
 
-            BDHelper oDatos = new BDHelper();
-            return oDatos.consultar(consulta);
+            //BDHelper oDatos = new BDHelper();
+            return BDHelper.obtenerInstancia().consultar(consulta);
         }
 
         public DataTable RecuperarUno(int idBug)
@@ -91,9 +91,9 @@ namespace AppBTS.Negocio
                                + " JOIN Prioridades pr on pr.id_prioridad = b.id_prioridad "
                                + " WHERE b.borrado = 0 "
                                + " AND b.id_bug =" + idBug;
-                               
-            BDHelper oDatos = new BDHelper();
-            return oDatos.consultar(consulta);
+
+            //BDHelper oDatos = new BDHelper();
+            return BDHelper.obtenerInstancia().consultar(consulta);
         }
         //hola2dda//
         ////////////
