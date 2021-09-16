@@ -6,21 +6,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AppBTS.Negocio
+namespace AppBTS.Entidades
 {
-    class Estado
+    class Criticidad
     {
-        public int IdEstado { get; set; }
+        public int IdCriticidad { get; set; }
         public string Nombre { get; set; }
         public bool Borrado { get; set; }
 
         public DataTable RecuperarTodos()
         {
-            string consulta = "select * from Estados where borrado = 0 ORDER BY 2";
+            string consulta = "select * from Criticidades where borrado = 0 ORDER BY 2";
 
             //BDHelper oDatos = new BDHelper();
             return BDHelper.obtenerInstancia().consultar(consulta);
         }
-
     }
 }

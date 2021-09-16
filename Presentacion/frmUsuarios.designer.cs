@@ -1,4 +1,4 @@
-﻿namespace ProyectoBugs.Formularios
+﻿namespace AppBTS.Presentacion
 {
     partial class frmUsuarios
     {

@@ -1,4 +1,5 @@
-﻿using AppBTS.Negocio;
+﻿using AppBTS.Entidades;
+using AppBTS.Servicios;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,7 +18,7 @@ namespace AppBTS.Presentacion
         Estado oEstado = new Estado();
         Prioridad oPrioridad = new Prioridad();
         Producto oProducto = new Producto();
-        Usuario oUsuario = new Usuario();
+        UsuarioService oUsuario = new UsuarioService();
         Criticidad oCriticidad = new Criticidad();
         
 
@@ -44,7 +45,7 @@ namespace AppBTS.Presentacion
             this.CargarCombo(cboEstado,oEstado.RecuperarTodos());
             this.CargarCombo(cboPrioridad, oPrioridad.RecuperarTodos());
             this.CargarCombo(cboProducto, oProducto.RecuperarTodos());
-            this.CargarCombo(cboAsignado, oUsuario.RecuperarTodos(), "usuario", "id_usuario");
+            this.CargarCombo(cboAsignado, oUsuario.encontrarTodos(), "usuario", "id_usuario");
             this.CargarCombo(cboCriticidad, oCriticidad.RecuperarTodos());
 
             //this.dgbBugs.DataSource = oBug.RecuperarTodos();

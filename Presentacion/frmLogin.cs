@@ -1,4 +1,5 @@
-﻿using AppBTS.Negocio;
+﻿using AppBTS.Entidades;
+using AppBTS.Servicios;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,10 +16,12 @@ namespace AppBTS
     {
         //string user = "admin";
         //string pass = "1234";
+        private UsuarioService miGestor = new UsuarioService();
 
         private Usuario miUsuario = new Usuario();
-
         internal Usuario MiUsuario { get => miUsuario; set => miUsuario = value; }
+
+
         public frmLogin()
         {
             InitializeComponent();
@@ -67,7 +70,7 @@ namespace AppBTS
             miUsuario.Nombre = this.txtUsuario.Text; //hace que se asigne el set en el nombre en la pagina Usuario
             miUsuario.Password = this.txtContraseña.Text;
 
-            miUsuario.Id_usuario = this.miUsuario.validarUsuario(this.miUsuario.Nombre, this.miUsuario.Password);
+            miUsuario.Id_usuario = this.miGestor.encontrarUsuario(this.miUsuario.Nombre, this.miUsuario.Password);
 
             // if (this.txtUsuario.Text == this.lblUsuari && this.txtContraseña.Text == this.pass)
             if (MiUsuario.Id_usuario != 0)

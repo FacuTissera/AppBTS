@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AppBTS.Negocio
+namespace AppBTS.Entidades
 {
     class HistorialBug
     {
