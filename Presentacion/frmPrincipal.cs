@@ -62,5 +62,12 @@ namespace AppBTS
 
             fl.Dispose();
         }
+
+        private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmUsuarios fu;
+            fu = new frmUsuarios();
+            fu.ShowDialog();
+        }
     }
 }

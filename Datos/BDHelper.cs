@@ -12,7 +12,7 @@ namespace AppBTS.Datos
     {
         private SqlConnection conexion = new SqlConnection();
         private SqlCommand comando = new SqlCommand();
-        private string cadenaConexion = @"Data Source=LOCALHOST;Initial Catalog = BugTracker; Integrated Security = True";
+        private string cadenaConexion = @"Data Source=DESKTOP-GBIGEVC\SQLEXPRESS;Initial Catalog=PAVI;Integrated Security=True";
         public DataTable consultar(string consultaSQL)
         {
             DataTable tabla = new DataTable();

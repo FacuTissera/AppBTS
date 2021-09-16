@@ -31,6 +31,7 @@ namespace AppBTS
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipal));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.ingresarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.soporteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.estadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -41,7 +42,6 @@ namespace AppBTS
             this.consultasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.informesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ingresarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,6 +57,13 @@ namespace AppBTS
             this.menuStrip1.Size = new System.Drawing.Size(429, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
+            // 
+            // ingresarToolStripMenuItem
+            // 
+            this.ingresarToolStripMenuItem.Name = "ingresarToolStripMenuItem";
+            this.ingresarToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
+            this.ingresarToolStripMenuItem.Text = "Ingresar";
+            this.ingresarToolStripMenuItem.Click += new System.EventHandler(this.ingresarToolStripMenuItem_Click);
             // 
             // soporteToolStripMenuItem
             // 
@@ -75,6 +82,7 @@ namespace AppBTS
             this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
             this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.usuariosToolStripMenuItem.Text = "Usuarios";
+            this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
             // 
             // estadosToolStripMenuItem
             // 
@@ -112,14 +120,14 @@ namespace AppBTS
             // consultasToolStripMenuItem
             // 
             this.consultasToolStripMenuItem.Name = "consultasToolStripMenuItem";
-            this.consultasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.consultasToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
             this.consultasToolStripMenuItem.Text = "Consultas";
             this.consultasToolStripMenuItem.Click += new System.EventHandler(this.consultasToolStripMenuItem_Click);
             // 
             // informesToolStripMenuItem
             // 
             this.informesToolStripMenuItem.Name = "informesToolStripMenuItem";
-            this.informesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.informesToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
             this.informesToolStripMenuItem.Text = "Informes";
             // 
             // salirToolStripMenuItem
@@ -128,13 +136,6 @@ namespace AppBTS
             this.salirToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
-            // 
-            // ingresarToolStripMenuItem
-            // 
-            this.ingresarToolStripMenuItem.Name = "ingresarToolStripMenuItem";
-            this.ingresarToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
-            this.ingresarToolStripMenuItem.Text = "Ingresar";
-            this.ingresarToolStripMenuItem.Click += new System.EventHandler(this.ingresarToolStripMenuItem_Click);
             // 
             // frmPrincipal
             // 
