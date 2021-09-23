@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AppBTS.Entidades;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -12,6 +13,7 @@ namespace AppBTS.Datos.Interfaces
         //esto es que hace una clase (entidad)
         int validarUsuario(string nombre, string clave); //metodo abstracto
         DataTable RecuperarTodos();
-
+        DataTable RecuperarPorId(int id);
+        void crear(Usuario oUsuario);
     }
 }

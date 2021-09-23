@@ -43,5 +43,19 @@ namespace AppBTS.Datos
             conexion.Close();
             return tabla;
         }
+
+        public void actualizar(string consultaSQL)
+        {  
+            conexion.ConnectionString = cadenaConexion;
+            conexion.Open();
+
+            comando.Connection = conexion;
+            comando.CommandType = CommandType.Text;
+            comando.CommandText = consultaSQL;
+            comando.ExecuteNonQuery();
+
+            conexion.Close();
+        }
+
     }
 }

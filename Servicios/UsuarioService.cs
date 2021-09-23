@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using AppBTS.Datos.Daos;
+using AppBTS.Entidades;
 
 namespace AppBTS.Servicios
 {
@@ -25,6 +26,14 @@ namespace AppBTS.Servicios
         public DataTable encontrarTodos()
         {
             return dao.RecuperarTodos();
+        }
+        public DataTable traerporId(int id)
+        {
+            return dao.RecuperarPorId(id);
+        }
+        public void insertarUsuario(Usuario oUsuario)
+        {
+            dao.crear(oUsuario);
         }
     }
 
