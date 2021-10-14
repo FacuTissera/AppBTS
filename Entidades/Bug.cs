@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace AppBTS.Entidades
 {
-    class Bug
+    public class Bug
     {
 
          //hola
@@ -23,6 +23,7 @@ namespace AppBTS.Entidades
         private int id_criticidad;
         private int id_estado;
         private bool borrado;
+        private List<HistorialBug> detalleBug = new List<HistorialBug>;
 
         public int Id_bug { get => id_bug; set => id_bug = value; }
         public string Titulo { get => titulo; set => titulo = value; }

@@ -312,6 +312,7 @@ namespace AppBTS.Presentacion
             this.btnNuevo.TabIndex = 15;
             this.ttAñadir.SetToolTip(this.btnNuevo, "Añadir");
             this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // btnSalir
             // 
@@ -347,6 +348,7 @@ namespace AppBTS.Presentacion
             this.btnEditar.TabIndex = 21;
             this.ttEditar.SetToolTip(this.btnEditar, "Editar");
             this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnAsignar
             // 

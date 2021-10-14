@@ -169,5 +169,17 @@ namespace AppBTS.Presentacion
 
             fdb.Dispose();
         }
+
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+            frmBug fnb = new frmBug(Modo.Create, null);
+            fnb.ShowDialog();
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            //frmBug feb = new frmBug(Modo.Update, oBug.RecuperarUno(int)dgvBugs.CurrentRow.Cells[0].Value)
+            //feb.ShowDialog();
+        }
     }
 }
