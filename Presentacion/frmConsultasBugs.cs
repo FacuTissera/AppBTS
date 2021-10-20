@@ -58,7 +58,14 @@ namespace AppBTS.Presentacion
             this.btnDetalle.Enabled = false;
             this.btnSalir.Enabled = true;
 
-
+            if (!(2==3))
+            {
+                MessageBox.Show("hola");
+            }
+            if (2!=3)
+            {
+                MessageBox.Show("hola2");
+            }
         }
 
         private void CargarGrilla(DataGridView grilla, DataTable tabla)
